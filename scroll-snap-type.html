@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>scroll-snap-type</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      /*捕捉y轴上的位置 以强制严格的方式 */
+      scroll-snap-type: y mandatory;
+
+    }
+
+    div {
+      color: #fff;
+      height: 100vh;
+      font-size: 120px;
+      text-align: center;
+      line-height: 100vh;
+      /*以下为必须要的属性*/
+      /*对齐的位置 start/center/end */
+      scroll-snap-align: center;
+      /*总是以元素第一个对齐的位置捕捉*/
+      scroll-snap-stop: always;
+
+    }
+
+    .div1 {
+      background-color: skyblue;
+    }
+
+    .div2 {
+      background-color: gainsboro;
+    }
+
+    .div3 {
+      background-color: burlywood;
+    }
+
+    .div4 {
+      background-color: lightpink;
+    }
+
+    .div5 {
+      background-color:  #87CCEA;
+    }
+  </style>
+</head>
+<body>
+<div class="div1">1</div>
+<div class="div2">2</div>
+<div class="div3">3</div>
+<div class="div4">4</div>
+<div class="div5">5</div>
+</body>
+</html>
